@@ -1,8 +1,10 @@
-const express = require("express");
-const { getUser } = require("../controllers/adminRouteController");
+const express = require('express');
+const { getUser, saveUser } = require("../controllers/adminRouteController");
 
-const adminRoute = express.Router();
+const router = express.Router();
 
-adminRoute.get("/userData", getUser);
+router.route("/userData")
+    .get(getUser)
+    .post(saveUser)
 
-module.exports = adminRoute;
+module.exports = router;
