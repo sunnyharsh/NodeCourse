@@ -1,6 +1,7 @@
 const catchAsync = require("../utils/catchAsync");
 const Tour = require("../models/tourModal");
 const { query } = require("express");
+const AppError = require("../utils/appError");
 
 // createTour
 exports.createTour = catchAsync(async (req, res, next) => {
@@ -71,13 +72,20 @@ exports.getAllTour = catchAsync(async (req, res, next) => {
             query = query.select('-__v')
         }
 
+        // 4.) pagination
+        const page = req.query.page * 1 || 1;
+        const limit = req.query.limit * 1 || 100;
+        const skip = (page - 1) * limit;
+        query = query.skip(skip).limit(limit)
+
+        if (req.query.page) {
+            const numOfTours = await Tour.countDocuments();
+            console.log(skip, numOfTours)
+            if (skip >= numOfTours) next(new AppError(`page dows not exist`, 404));
+        }
+
         const tours = await query;
 
-        // const tours = await Tour.find()
-        //     .where('duration')
-        //     .equals(8)
-        //     .where('difficulty')
-        //     .equals('easy');
         res.status(200).json({
             status: 'sucess',
             results: tours.length,
