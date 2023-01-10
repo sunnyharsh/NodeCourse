@@ -48,3 +48,4 @@ console.log(process.argv)
 
 // command for run import and delete
 // node devData/import-dev-data.js --import
+// node devData/import-dev-data.js --delete

@@ -2,7 +2,7 @@
     {
         "name": "The Park Comper",
         "price": 10001,
-        "duration": 9,
+        "duration": 7,
         "maxGroupSize": 30,
         "difficulty": "easy",
         "ratingsAverage": 4.6,
@@ -12,12 +12,12 @@
         "description": "this. description",
         "imageCover": "tour-1 cover image",
         "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
-        "startDates": ["2022-02-05, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
+        "startDates": ["2021-02-05, 10:00", "2021-06-11, 10:00", "2021-02-06, 12:00"]
     },
     {
         "name": "The Forest Hiker",
         "price": 10001,
-        "duration": 9,
+        "duration": 14,
         "maxGroupSize": 30,
         "difficulty": "easy",
         "ratingsAverage": 4.6,
@@ -27,12 +27,12 @@
         "description": "this. description",
         "imageCover": "tour-1 cover image",
         "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
-        "startDates": ["2022-02-05, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
+        "startDates": ["2022-03-05, 10:00", "2022-06-11, 10:00", "2022-02-24, 12:00"]
     },
     {
         "name": "The Snow Adventure",
         "price": 10001,
-        "duration": 9,
+        "duration": 21,
         "maxGroupSize": 30,
         "difficulty": "easy",
         "ratingsAverage": 4.6,
@@ -42,12 +42,12 @@
         "description": "this. description",
         "imageCover": "tour-1 cover image",
         "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
-        "startDates": ["2022-02-05, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
+        "startDates": ["2021-11-01, 10:00", "2021-06-02, 10:00", "2021-06-06, 12:00"]
     },
     {
         "name": "for delete Purpose",
         "price": 10001,
-        "duration": 9,
+        "duration": 28,
         "maxGroupSize": 30,
         "difficulty": "easy",
         "ratingsAverage": 4.6,
@@ -62,7 +62,7 @@
     {
         "name": "The Snow master",
         "price": 10001,
-        "duration": 9,
+        "duration": 35,
         "maxGroupSize": 30,
         "difficulty": "easy",
         "ratingsAverage": 4.6,
@@ -72,7 +72,7 @@
         "description": "this. description",
         "imageCover": "tour-1 cover image",
         "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
-        "startDates": ["2022-02-05, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
+        "startDates": ["2022-04-06, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
     },
     {
     "name": "for testing Purpose",
@@ -87,6 +87,6 @@
     "description": "this. description",
     "imageCover": "tour-1 cover image",
     "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
-    "startDates": ["2022-02-05, 10:00", "2022-06-11, 10:00", "2022-02-06, 12:00"]
+    "startDates": ["2022-02-05, 10:00", "2022-09-21, 10:00", "2022-02-06, 12:00"]
     }
 ]

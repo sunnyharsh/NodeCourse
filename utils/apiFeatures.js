@@ -9,7 +9,7 @@ class APIFeatures {
         const excludedFields = ['page', 'sort', 'limit', 'fields'];
         excludedFields.forEach(el => delete queryObj[el]);
 
-        // 1B.) advanced Filtering
+        // 1B.) advanced Filtering for less than, greter than, and equal
         let queryStr = JSON.stringify(queryObj);
         queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, match => `$${match}`);
         this.query.find(JSON.parse(queryStr));
@@ -40,6 +40,5 @@ class APIFeatures {
         this.query = this.query.skip(skip).limit(limit)
         return this;
     }
-
 }
 module.exports = APIFeatures;
