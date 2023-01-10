@@ -4,7 +4,7 @@
         "price": 10001,
         "duration": 7,
         "maxGroupSize": 30,
-        "difficulty": "easy",
+        "difficulty": "medium",
         "ratingsAverage": 4.6,
         "ratingQuantity": 54,
         "priceDiscount":12,
@@ -19,7 +19,7 @@
         "price": 10001,
         "duration": 14,
         "maxGroupSize": 30,
-        "difficulty": "easy",
+        "difficulty": "medium",
         "ratingsAverage": 4.6,
         "ratingQuantity": 54,
         "priceDiscount":12,
@@ -34,7 +34,7 @@
         "price": 10001,
         "duration": 21,
         "maxGroupSize": 30,
-        "difficulty": "easy",
+        "difficulty": "difficult",
         "ratingsAverage": 4.6,
         "ratingQuantity": 54,
         "priceDiscount":12,
@@ -49,7 +49,7 @@
         "price": 10001,
         "duration": 28,
         "maxGroupSize": 30,
-        "difficulty": "easy",
+        "difficulty": "difficult",
         "ratingsAverage": 4.6,
         "ratingQuantity": 54,
         "priceDiscount":12,
@@ -88,5 +88,16 @@
     "imageCover": "tour-1 cover image",
     "images": ["tour-2 cover image","tour-3 cover image","tour-4 cover image"],
     "startDates": ["2022-02-05, 10:00", "2022-09-21, 10:00", "2022-02-06, 12:00"]
+    },
+    {
+        "name": "The secret tour",
+        "price": 555,
+        "duration": 1,
+        "maxGroupSize": 1,
+        "difficulty": "easy",
+        "priceDiscount":1,
+        "summary": "test tour",
+        "imageCover": "tour-1 cover image",
+        "secretTour": true
     }
 ]

@@ -54,9 +54,14 @@ const tourScehma = new mongoose.Schema({
     images: [String],
     createdAt: {
         type: Date,
-        default: Date.now()
+        default: Date.now(),
+        select: false
     },
-    startDates: [Date]
+    startDates: [Date],
+    secretTour: {
+        type: Boolean,
+        default: false
+    }
 },
     {
         toJSON: { virtuals: true },
@@ -84,5 +89,27 @@ tourScehma.pre('save', function (next) {
 //     console.log(doc)
 //     next();
 // })
+
+// QUERY MIDDLEWARE
+
+// tourScehma.pre('find', function (next) {
+tourScehma.pre(/^find/, function (next) {
+    this.find({ secretTour: { $ne: true } });
+    this.start = Date.now();
+    next();
+})
+
+tourScehma.post(/^find/, function (docs, next) {
+    console.log(`Query time ${Date.now() - this.start} millisecond`)
+    // console.log(docs)
+    next();
+})
+
+//AGGREGATION MIDDLEWARE
+tourScehma.pre('aggregate', function (next) {
+    this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+    next();
+})
+
 const Tour = mongoose.model('Tour', tourScehma);
 module.exports = Tour;
